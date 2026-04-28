@@ -1,0 +1,64 @@
+
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: 
+        "header header"
+        "aside main";
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas:
+        "day day day day day day day"
+        "day day day day day day day";
+}
+
+.day {
+    padding: 12px;
+    border: 2px solid black;
+    background-color: #eee;
+    text-align: center;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+.header {
+    background-color: rgb(86, 86, 170);
+    border: 1px solid black;
+}
+
+.aside {
+    background-color: pink;
+    border: 1px solid black;
+}
+
+.main {
+    background-color: orange;
+    border: 1px solid black;
+}
+
+.date-and-time-section {
+    background-color: blueviolet;
+    border: 1px solid black;
+    height: var(--spacing-test);
+}
+
+.month {
+    background-color: blueviolet;
+    border: 1px solid black;
+    height: var(--spacing-test);
+}
