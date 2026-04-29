@@ -9,15 +9,23 @@ body {
         "aside main";
 }
 
+.weekdays-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-areas:
-        "day day day day day day day"
-        "day day day day day day day";
 }
 
 .day {
+    padding: 12px;
+    border: 2px solid black;
+    background-color: #eee;
+    text-align: center;
+}
+
+.weekday {
     padding: 12px;
     border: 2px solid black;
     background-color: #eee;
@@ -39,6 +47,7 @@ aside {
 .header {
     background-color: rgb(86, 86, 170);
     border: 1px solid black;
+    height: var(--spacing-vertical-lg);
 }
 
 .aside {
@@ -54,11 +63,11 @@ aside {
 .date-and-time-section {
     background-color: blueviolet;
     border: 1px solid black;
-    height: var(--spacing-test);
+    height: var(--spacing-vertical-md);
 }
 
 .month {
     background-color: blueviolet;
     border: 1px solid black;
-    height: var(--spacing-test);
+    height: var(--spacing-vertical-md);
 }
