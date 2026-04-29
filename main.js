@@ -47,6 +47,6 @@ function GetDate()
 
 function SetMonth() {
     let month = new Date().toLocaleDateString("sv-SE", { month: "long"});
-    let day = new Date().toLocaleDateString("sv-SE", {day: "2-digit"});
-    document.querySelector(".month").textContent = month + " " + day;
+    let year = new Date().toLocaleDateString("sv-SE", {year: "numeric"});
+    document.querySelector(".month").textContent = month + " " + year;
 }

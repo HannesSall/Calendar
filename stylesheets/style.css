@@ -48,11 +48,16 @@ aside {
     background-color: rgb(86, 86, 170);
     border: 1px solid black;
     height: var(--spacing-vertical-lg);
+    font-size: 64px;
+    text-align: center;
 }
 
 .aside {
+    display: flex;
+    flex-direction: column;
     background-color: pink;
     border: 1px solid black;
+    gap: 15px;
 }
 
 .main {
@@ -64,10 +69,22 @@ aside {
     background-color: blueviolet;
     border: 1px solid black;
     height: var(--spacing-vertical-md);
+    font-size: 24px;
 }
 
 .month {
     background-color: blueviolet;
     border: 1px solid black;
     height: var(--spacing-vertical-md);
+    font-size: 24px;
+}
+
+.add-todo {
+    background-color: cyan;
+    text-align: center;
+}
+
+.del-todo {
+    background-color: green;
+    text-align: center;
 }
