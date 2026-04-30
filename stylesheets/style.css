@@ -61,7 +61,7 @@ aside {
 }
 
 .main {
-    background-color: orange;
+    background-color: #eee;
     border: 1px solid black;
 }
 
@@ -70,6 +70,7 @@ aside {
     border: 1px solid black;
     height: var(--spacing-vertical-md);
     font-size: 24px;
+    text-align: center;
 }
 
 .month {
@@ -77,6 +78,19 @@ aside {
     border: 1px solid black;
     height: var(--spacing-vertical-md);
     font-size: 24px;
+    text-align: center;
+}
+
+.month-section {
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+    border: 1px solid black;
+    height: var(--spacing-vertical-md);
+    font-size: 24px;
+    text-align: center;
+    align-items: center;
+    gap: 24px;
 }
 
 .add-todo {
