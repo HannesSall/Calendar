@@ -92,6 +92,7 @@ aside {
     text-align: center;
     align-items: center;
     gap: 24px;
+    justify-content: space-between;
 }
 
 .add-todo {
