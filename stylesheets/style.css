@@ -70,7 +70,8 @@ aside {
     border: 1px solid black;
     height: var(--spacing-vertical-md);
     font-size: 24px;
-    text-align: center;
+    text-align: left;
+    line-height: 0.2rem;
 }
 
 .month {
