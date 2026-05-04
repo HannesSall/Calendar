@@ -16,7 +16,9 @@
     <header class="header">
         🤌🍕
     </header>
-
+    <section>
+        
+    </section>
     <aside class="aside">
         <section class="date-and-time-section">
             <p id="date"></p>
@@ -34,23 +36,46 @@
     <main class="main">
         <section class="month-section">
             <button class="left-btn-month">&lt;</button>
-            <section class="month">
-                May 2026
-            </section>
+                <button popovertarget="popover-menu-month-cal" class="month-button" href="/">May 2026</button>
+    <div popover id="popover-menu-month-cal" class="popover-menu-month-cal">
+        
+        <div class="month-grid">
+        <button class="year-selector-left-btn">&lt;</button>
+        <div class="year-selector">2029</div>
+        <button class="year-selector-right-btn">&gt;</button>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div id="popover-month-style" class="popover-month-jan">Jan</div>
+        <div id="popover-month-style" class="popover-month-feb">Feb</div>
+        <div id="popover-month-style" class="popover-month-mars">Mars</div>
+        <div id="popover-month-style" class="popover-month-april">April</div>
+        <div id="popover-month-style" class="popover-month-may">May</div>  
+        <div id="popover-month-style" class="popover-month-june">June</div>
+        <div id="popover-month-style" class="popover-month-juli">Juli</div>
+        <div id="popover-month-style" class="popover-month-aug">Aug</div>
+        <div id="popover-month-style" class="popover-month-sep">Sep</div>
+        <div id="popover-month-style" class="popover-month-oct">Oct</div>
+        <div id="popover-month-style" class="popover-month-nov">Nov</div>
+        <div id="popover-month-style" class="popover-month-dec">Dec</div>
+        </div>
+    </div>
             <button class="right-btn-month">&gt;</button>
         </section>
+
         <section class="weekdays-grid">
             <div class="weekday">Mon</div>
             <div class="weekday">Tue</div>
             <div class="weekday">Wed</div>
             <div class="weekday">Thu</div>
-            <div class="weekday">Fri</div>
+            <div class="weekday">Fri</div>  
             <div class="weekday">Sat</div>
             <div class="weekday">Sun</div>
         </section>
         <section class="calendar-grid">
 
         </section>
+        
     </main>
 
 </body>

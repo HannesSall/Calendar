@@ -5,18 +5,22 @@
 body {
     margin: 0;
     display: grid;
-    grid-template-columns: 20% 1fr;
-    grid-template-areas: 
+    grid-template-columns: 300px 1fr;
+    grid-template-areas:
         "header header"
+        "aside main"
         "aside main";
     height: 100vh;
     grid-template-rows: auto 1fr;
+    min-height: 100vh;
 }
+
 
 .weekdays-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
+
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -72,6 +76,7 @@ aside {
 .main {
     background-color: #eee;
     border: 1px solid black;
+    height: 100%;
 }
 
 .date-and-time-section {
@@ -125,9 +130,50 @@ aside {
 
 article {
     display: grid;
-    gap: 0.5rem; 
+    gap: 0.5rem;
 }
 
-.card-title, .card-description, .card-created, .card-due {
+.card-title,
+.card-description,
+.card-created,
+.card-due {
     margin: 0;
+}
+
+.month-button {
+    border: 1px solid black;
+    background: green;
+}
+
+
+
+.month-grid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-0%, -45%);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+
+}
+
+.popover-month {
+    border: 1px solid black;
+}
+
+#popover-month-style {
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.day:hover {
+    background: rgb(210, 210, 210);
 }

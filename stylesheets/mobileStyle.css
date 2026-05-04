@@ -12,4 +12,8 @@
     .date-and-time-section {
         text-align: center;
     }
+
+    .month-grid {
+        transform: translate(-50%, -40%);
+    }
 }
