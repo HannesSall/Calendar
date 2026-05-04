@@ -109,8 +109,26 @@ aside {
     background: green;
 }
 
-.popover-menu-month-cal {
-    background: pink;
-    position: absolute;
-    transform: translateX(-50%);
+#anchor_1 {
+    anchor-name: --anchor_1;
+}
+
+.month-grid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.popover-month {
+    border: 1px solid black;
 }
