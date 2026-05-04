@@ -1,0 +1,42 @@
+const todos = [
+  {
+    id: 1,
+    title: "Buy milk",
+    description: "Lactose-free milk from Ica",
+    completed: false,
+    createdAt: new Date().toISOString(),
+    dueDate: "2026-05-05",
+  },
+  {
+    id: 2,
+    title: "Study JavaScript",
+    description: "Practice arrays and objects",
+    completed: true,
+    createdAt: new Date().toISOString(),
+    dueDate: null,
+  },
+  {
+    id: 3,
+    title: "Go for a run",
+    description: "5 km in the evening",
+    completed: false,
+    createdAt: new Date().toISOString(),
+    dueDate: "2026-05-04",
+  },
+  {
+    id: 4,
+    title: "Clean apartment",
+    description: "Vacuum and clean kitchen",
+    completed: false,
+    createdAt: new Date().toISOString(),
+    dueDate: null,
+  },
+  {
+    id: 5,
+    title: "Call mom",
+    description: "Check in and plan weekend",
+    completed: true,
+    createdAt: new Date().toISOString(),
+    dueDate: "2026-05-06",
+  },
+];
