@@ -18,6 +18,10 @@ body {
     grid-template-columns: repeat(7, 1fr);
 }
 
+.main-grid-section {
+    gap: 1rem;
+}
+
 .day {
     padding: 12px;
     border: 2px solid black;
