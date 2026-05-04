@@ -1,11 +1,17 @@
 body {
     margin: 0;
     display: grid;
+    min-height: 100vh;
     grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr;
+    /* 👈 THIS is key */
     grid-template-areas:
         "header header"
+        "aside main"
         "aside main";
+    min-height: 100vh;
 }
+
 
 .weekdays-grid {
     display: grid;
@@ -15,6 +21,7 @@ body {
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    height: 100vh;
 }
 
 .day {
@@ -37,6 +44,7 @@ header {
 
 main {
     grid-area: main;
+    min-height: 100svh;
 }
 
 aside {
@@ -62,6 +70,7 @@ aside {
 .main {
     background-color: #eee;
     border: 1px solid black;
+    height: 100%;
 }
 
 .date-and-time-section {
@@ -109,9 +118,7 @@ aside {
     background: green;
 }
 
-#anchor_1 {
-    anchor-name: --anchor_1;
-}
+
 
 .month-grid {
     position: fixed;
@@ -138,4 +145,8 @@ aside {
 #popover-month-style {
     border: 1px solid black;
     padding: 1rem;
+}
+
+.day:hover {
+    background: rgb(210, 210, 210);
 }
