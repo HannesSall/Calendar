@@ -9,6 +9,8 @@ function main() {
   renderCalendar();
   //GetDate(year, month);
   renderWelcomeSegment();
+
+  renderTodos();
 }
 
 function renderCalendar() {
