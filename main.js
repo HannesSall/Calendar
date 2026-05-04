@@ -70,36 +70,41 @@ function SetMonth(year, month) {
     month: "long",
   });
 
-  document.querySelector(".month").textContent = monthStr + " " + year;
+  document.querySelector(".month-button").textContent = monthStr + " " + year;
 }
 
 function SetupListeners() {
-  document.addEventListener("click", (event) => {
-    if (event.target.matches(".left-btn-month")) {
-      month--;
+  document.addEventListener("click", prevMonth);
+  document.addEventListener("click", nextMonth);
+}
 
-      if (month < 0) {
-        month = 11;
-        year--;
-      }
+function prevMonth(event) {
+  if (event.target.matches(".left-btn-month")) {
+    month--;
 
-      renderCalendar();
-      SetMonth(year, month);
-      GetDate(year, month);
+    if (month < 0) {
+      month = 11;
+      year--;
     }
-  });
-  document.addEventListener("click", (event) => {
-    if (event.target.matches(".right-btn-month")) {
-      month++;
 
-      if (month > 11) {
-        month = 0;
-        year++;
-      }
+    //const date = new Date();
+    //date.setMonth(date.getMonth() + 1);
 
-      renderCalendar();
-      SetMonth(year, month);
-      GetDate(year, month);
+    renderCalendar();
+    SetMonth(year, month);
+  }
+}
+
+function nextMonth(event) {
+  if (event.target.matches(".right-btn-month")) {
+    month++;
+
+    if (month > 11) {
+      month = 0;
+      year++;
     }
-  });
+
+    renderCalendar();
+    SetMonth(year, month);
+  }
 }

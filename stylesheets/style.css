@@ -1,10 +1,8 @@
-
-
 body {
     margin: 0;
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-template-areas: 
+    grid-template-areas:
         "header header"
         "aside main";
 }
@@ -13,6 +11,7 @@ body {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
+
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -103,4 +102,15 @@ aside {
 .del-todo {
     background-color: green;
     text-align: center;
+}
+
+.month-button {
+    border: 1px solid black;
+    background: green;
+}
+
+.popover-menu-month-cal {
+    background: pink;
+    position: absolute;
+    transform: translateX(-50%);
 }
