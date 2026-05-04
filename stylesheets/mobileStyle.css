@@ -1,0 +1,15 @@
+@media (max-width: 734px) {
+    body {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "aside";
+    }
+
+    .date-and-time-section {
+        text-align: center;
+    }
+}
