@@ -24,15 +24,15 @@ function createTodoCard(todo) {
   desc.textContent = "Beskrivning: " + todo.description;
   desc.className = "card-description";
 
-  const checkbox = document.createElement("input");
-  checkbox.type = "checkbox";
-  checkbox.checked = todo.completed;
+  const doneBtn = document.createElement("button");
+  doneBtn.textContent = "Klar";
+  doneBtn.addEventListener("click", () => deleteTodo(todo.id));
 
   const label = document.createElement("label");
-  label.append("Avklarad: ", checkbox);
+  label.append("Avklarad: ", doneBtn);
 
   const completed = document.createElement("p");
-  completed.textContent = 
+  completed.textContent =
     "Skapad: " + new Date(todo.createdAt).toLocaleDateString("sv-SE");
   completed.className = "card-created";
 
@@ -44,7 +44,12 @@ function createTodoCard(todo) {
       : "Ingen deadline");
   due.className = "card-due";
 
-  article.append(title, desc, label, completed, due);
+  article.append(title, desc, completed, due, label);
 
   return article;
+}
+
+function deleteTodo(id) {
+  todos = todos.filter((todo) => todo.id !== id);
+  renderTodos();
 }
