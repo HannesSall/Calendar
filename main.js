@@ -76,6 +76,7 @@ function SetMonth(year, month) {
 function SetupListeners() {
   document.addEventListener("click", prevMonth);
   document.addEventListener("click", nextMonth);
+  document.addEventListener("click", test);
 }
 
 function prevMonth(event) {
@@ -106,5 +107,33 @@ function nextMonth(event) {
 
     renderCalendar();
     SetMonth(year, month);
+  }
+}
+
+function test(event) {
+  if (event.target.matches(".popover-month-jan")) {
+    console.log(document.querySelector(".popover-month-jan").innerHTML);
+  } else if (event.target.matches(".popover-month-feb")) {
+    console.log(document.querySelector(".popover-month-feb").innerHTML);
+  } else if (event.target.matches(".popover-month-mars")) {
+    console.log(document.querySelector(".popover-month-mars").innerHTML);
+  } else if (event.target.matches(".popover-month-april")) {
+    console.log(document.querySelector(".popover-month-april").innerHTML);
+  } else if (event.target.matches(".popover-month-may")) {
+    console.log(document.querySelector(".popover-month-may").innerHTML);
+  } else if (event.target.matches(".popover-month-june")) {
+    console.log(document.querySelector(".popover-month-june").innerHTML);
+  } else if (event.target.matches(".popover-month-juli")) {
+    console.log(document.querySelector(".popover-month-juli").innerHTML);
+  } else if (event.target.matches(".popover-month-aug")) {
+    console.log(document.querySelector(".popover-month-aug").innerHTML);
+  } else if (event.target.matches(".popover-month-sep")) {
+    console.log(document.querySelector(".popover-month-sep").innerHTML);
+  } else if (event.target.matches(".popover-month-oct")) {
+    console.log(document.querySelector(".popover-month-oct").innerHTML);
+  } else if (event.target.matches(".popover-month-nov")) {
+    console.log(document.querySelector(".popover-month-nov").innerHTML);
+  } else if (event.target.matches(".popover-month-dec")) {
+    console.log(document.querySelector(".popover-month-dec").innerHTML);
   }
 }
