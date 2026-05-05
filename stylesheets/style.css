@@ -123,6 +123,7 @@ aside {
 
 .card {
     border: 1px solid black;
+    padding: 0.5rem;
 }
 
 .todoList {
@@ -190,7 +191,7 @@ article {
 }
 
 .modal {
-    position: absolute;
+    position: bottom;
     top: 0;
     left: 0;
     width: 100%;
@@ -202,4 +203,15 @@ article {
     position: relative;
     flex: 1;
     overflow-y: auto;
+}
+
+form {
+    display: grid;
+    padding: 1rem;
+    gap: 5px;
+}
+
+.todo-button {
+    margin-left: 1rem;
+    margin-top: 1rem;
 }
