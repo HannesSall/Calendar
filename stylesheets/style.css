@@ -57,7 +57,6 @@ main {
 
 aside {
     grid-area: aside;
-    height: 100%;
 }
 
 .header {
@@ -78,7 +77,6 @@ aside {
 .main {
     background-color: #eee;
     border: 1px solid black;
-    height: 100%;
 }
 
 .date-and-time-section {
@@ -129,7 +127,6 @@ aside {
 .todoList {
     gap: 1rem;
     overflow-y: auto;
-    height: 100%;
 }
 
 article {
