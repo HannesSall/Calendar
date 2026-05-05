@@ -52,24 +52,23 @@ function createTodoCard(todo) {
 function deleteTodo(id) {
   todos = todos.filter((todo) => todo.id !== id);
   renderTodos();
+  renderCalendar();
 }
 
-function groupTodoByDate(todos, date) {
+function groupTodoByDate(date) {
   date = date.toLocaleDateString("sv-se", {
     year: "numeric",
     month: "numeric",
     day: "numeric",
   });
   console.log("date in method", date);
-  dayTodos = todos.filter((todos) => todos.dueDate == date);
+  dayTodos = todos.filter((todo) => todo.dueDate == date);
   console.log("dayTodos", dayTodos);
   return dayTodos;
 }
 
-
 function addTodo(todo) {
   todos.push(todo);
-  renderTodos();
 }
 
 function showInputWindowForTodo() {
@@ -88,12 +87,12 @@ function handleTodo() {
     createdAt: new Date().toLocaleDateString("sv-SE"),
   };
   if (newTodo.title === "") {
-    showInputWindowForTodo();  
-  }
-  else {
+    showInputWindowForTodo();
+  } else {
     showInputWindowForTodo();
     addTodo(newTodo);
     renderTodos();
+    renderCalendar();
     document.getElementById("todoForm").reset();
   }
 }
