@@ -35,3 +35,27 @@ function renderCalendar() {
     grid.appendChild(day);
   }
 }
+function prevMonth(event) {
+  if (event.target.matches(".left-btn-month")) {
+    month--;
+
+    if (month < 0) {
+      month = 11;
+      year--;
+    }
+    renderCalendar();
+    SetMonth(year, month);
+  }
+}
+function nextMonth(event) {
+  if (event.target.matches(".right-btn-month")) {
+    month++;
+
+    if (month > 11) {
+      month = 0;
+      year++;
+    }
+    renderCalendar();
+    SetMonth(year, month);
+  }
+}
