@@ -16,4 +16,19 @@
     .month-grid {
         transform: translate(-50%, -40%);
     }
+
+    .todoList {
+        height: auto;
+    }
+
+    .modal {
+        width: 100%;
+        height: auto;
+        background-color: #ccc;
+        padding-bottom: 2rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
 }
