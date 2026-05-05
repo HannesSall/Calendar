@@ -8,7 +8,7 @@ function renderTodos() {
     const card = createTodoCard(todo);
 
     todoListElement.append(card);
-    todoListElement.className = "todoListClass";
+    todoListElement.className = "todoList";
   }
 }
 
@@ -17,7 +17,7 @@ function createTodoCard(todo) {
   article.className = "card";
 
   const title = document.createElement("h2");
-  title.textContent = "Titel: " + todo.title;
+  title.textContent = todo.title;
   title.className = "card-title";
 
   const desc = document.createElement("p");
@@ -64,4 +64,36 @@ function groupTodoByDate(todos, date) {
   dayTodos = todos.filter((todos) => todos.dueDate == date);
   console.log("dayTodos", dayTodos);
   return dayTodos;
+}
+
+
+function addTodo(todo) {
+  todos.push(todo);
+  renderTodos();
+}
+
+function showInputWindowForTodo() {
+  const todoInput = document.getElementById("todoInput");
+  todoInput.classList.toggle("hidden");
+  const btnAddTodo = document.getElementById("btn-add-todo");
+  btnAddTodo.classList.toggle("hidden");
+}
+
+function handleTodo() {
+  const newTodo = {
+    title: document.getElementById("title").value,
+    description: document.getElementById("notes").value,
+    dueDate: document.getElementById("deadline").value,
+    id: Math.max(...todos.map((todo) => todo.id)) + 1,
+    createdAt: new Date().toLocaleDateString("sv-SE"),
+  };
+  if (newTodo.title === "") {
+    showInputWindowForTodo();  
+  }
+  else {
+    showInputWindowForTodo();
+    addTodo(newTodo);
+    renderTodos();
+    document.getElementById("todoForm").reset();
+  }
 }
