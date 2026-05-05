@@ -37,7 +37,16 @@ function renderCalendar() {
   for (let i = 1; i <= daysInMonth; i++) {
     const day = document.createElement("div");
     day.classList.add("day");
-    day.textContent = i;
+    let daysTodos = groupTodoByDate(todos, new Date(year, month, i));
+    let todosNumber = daysTodos.length;
+    console.log("todos number", todosNumber);
+    day.innerHTML =
+      "<div class='todo-count'>" +
+      todosNumber +
+      "</div>" +
+      "<div>" +
+      i +
+      "</div>";
     grid.appendChild(day);
   }
 }

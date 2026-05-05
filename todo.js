@@ -53,3 +53,15 @@ function deleteTodo(id) {
   todos = todos.filter((todo) => todo.id !== id);
   renderTodos();
 }
+
+function groupTodoByDate(todos, date) {
+  date = date.toLocaleDateString("sv-se", {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+  });
+  console.log("date in method", date);
+  dayTodos = todos.filter((todos) => todos.dueDate == date);
+  console.log("dayTodos", dayTodos);
+  return dayTodos;
+}

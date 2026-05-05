@@ -28,7 +28,10 @@ body {
 }
 
 .day {
-    padding: 12px;
+    padding-left: 12px;
+    padding-bottom: 12px;
+    padding-right: 12px;
+    padding-top: 5px;
     border: 2px solid black;
     background-color: #eee;
     text-align: center;
@@ -176,4 +179,8 @@ article {
 
 .day:hover {
     background: rgb(210, 210, 210);
+}
+
+.todo-count {
+    text-align: left !important;
 }
