@@ -8,7 +8,7 @@ function renderTodos() {
     const card = createTodoCard(todo);
 
     todoListElement.append(card);
-    todoListElement.className = "todoListClass";
+    todoListElement.className = "todoList";
   }
 }
 
@@ -52,4 +52,35 @@ function createTodoCard(todo) {
 function deleteTodo(id) {
   todos = todos.filter((todo) => todo.id !== id);
   renderTodos();
+}
+
+function addTodo(todo) {
+  todos.push(todo);
+  renderTodos();
+}
+
+function showInputWindowForTodo() {
+  const todoInput = document.getElementById("todoInput");
+  todoInput.classList.toggle("hidden");
+  const btnAddTodo = document.getElementById("btn-add-todo");
+  btnAddTodo.classList.toggle("hidden");
+}
+
+function handleTodo() {
+  const newTodo = {
+    title: document.getElementById("title").value,
+    description: document.getElementById("notes").value,
+    dueDate: document.getElementById("deadline").value,
+    id: Math.max(...todos.map((todo) => todo.id)) + 1,
+    createdAt: new Date().toLocaleDateString("sv-SE"),
+  };
+  if (newTodo.title === "") {
+    showInputWindowForTodo();  
+  }
+  else {
+    showInputWindowForTodo();
+    addTodo(newTodo);
+    renderTodos();
+    document.getElementById("todoForm").reset();
+  }
 }

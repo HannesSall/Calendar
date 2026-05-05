@@ -25,11 +25,29 @@
             <p id="time"></p>
         </section>
         
-        <section id="todoList"></section>
+        <div class="todo-wrapper">
+            <section id="todoList"></section>
+    
+            <div id="todoInput" class="modal hidden">
+               <form id="todoForm">
+                    <label for="title">Titel</label>
+                    <input type="text" id="title" name="title" placeholder="Titel..." required>
+    
+                    <label for="notes">Anteckningar</label>
+                    <textarea type="notes" id="notes"></textarea>
+    
+                    <label for="deadline" >Deadline</label>
+                    <input type="date" name="deadline" id="deadline">
+                </form>
+        
+                <button type="button" onclick="handleTodo()">Skapa todo</button>
+                <button type="button" onclick="showInputWindowForTodo()">Avbryt</button>
+            </div>
+        </div>
 
-        <section class="add-todo">
-            Add TODO
-        </section>
+        <button type="button" id="btn-add-todo" onclick="showInputWindowForTodo()" class="btn-add-todo">
+           Lägg till todo
+        </button>
 
     </aside>
 
