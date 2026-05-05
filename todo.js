@@ -17,7 +17,7 @@ function createTodoCard(todo) {
   article.className = "card";
 
   const title = document.createElement("h2");
-  title.textContent = "Titel: " + todo.title;
+  title.textContent = todo.title;
   title.className = "card-title";
 
   const desc = document.createElement("p");
