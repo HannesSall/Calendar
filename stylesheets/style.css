@@ -234,3 +234,13 @@ form {
     background: #4A6741;
 
 }
+
+.klar-btn {
+    border-radius: 10px;
+    background: #4A6741;
+}
+
+.btn-add-todo {
+    border-radius: 10px;
+    background: #4A6741;
+}

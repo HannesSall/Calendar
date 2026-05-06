@@ -25,6 +25,7 @@ function createTodoCard(todo) {
   desc.className = "card-description";
 
   const doneBtn = document.createElement("button");
+  doneBtn.className = "klar-btn";
   doneBtn.textContent = "Klar";
   doneBtn.addEventListener("click", () => deleteTodo(todo.id));
 
