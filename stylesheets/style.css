@@ -40,12 +40,13 @@ body {
 .weekday {
     padding: 12px;
     border: 2px solid black;
-    background-color: #eee;
+    background: #F4F1EC;
     text-align: center;
 }
 
 header {
     grid-area: header;
+
 }
 
 main {
@@ -53,6 +54,7 @@ main {
     flex-direction: column;
     grid-area: main;
     height: 100%;
+    background: #F4F1EC;
 }
 
 aside {
@@ -60,7 +62,8 @@ aside {
 }
 
 .header {
-    background-color: rgb(86, 86, 170);
+    background-color: #A8B89A;
+    color: #1E2D1B;
     border: 1px solid black;
     height: var(--spacing-vertical-lg);
     font-size: 64px;
@@ -70,17 +73,19 @@ aside {
 .aside {
     display: flex;
     flex-direction: column;
-    background-color: pink;
+    background-color: #A8B89A;
     border: 1px solid black;
+    color: #4A6741;
 }
 
 .main {
-    background-color: #eee;
+    background-color: #F4F1EC;
     border: 1px solid black;
+    color: #4A6741;
 }
 
 .date-and-time-section {
-    background-color: blueviolet;
+    background-color: #A8B89A;
     border: 1px solid black;
     height: var(--spacing-vertical-md);
     font-size: 24px;
@@ -89,7 +94,7 @@ aside {
 }
 
 .month {
-    background-color: blueviolet;
+    background-color: #A8B89A;
     border: 1px solid black;
     height: var(--spacing-vertical-md);
     font-size: 24px;
@@ -99,7 +104,7 @@ aside {
 .month-section {
     display: flex;
     flex-direction: row;
-    background-color: blue;
+    background-color: #A8B89A;
     border: 1px solid black;
     height: var(--spacing-vertical-md);
     font-size: 24px;
