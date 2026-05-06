@@ -184,7 +184,8 @@ article {
 }
 
 .day:hover {
-    background: rgb(210, 210, 210);
+    background: #dad8d7;
+
 }
 
 .todo-count {
@@ -220,4 +221,16 @@ form {
     margin-left: 1rem;
     margin-top: 1rem;
     border-radius: 15px;
+}
+
+.left-btn-month {
+
+    border-radius: 10px;
+    background: #4A6741;
+}
+
+.right-btn-month {
+    border-radius: 10px;
+    background: #4A6741;
+
 }
