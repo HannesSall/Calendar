@@ -21,17 +21,43 @@ function renderCalendar() {
 
   for (let i = 1; i <= daysInMonth; i++) {
     const day = document.createElement("div");
+  
     day.classList.add("day");
     let daysTodos = groupTodoByDate(new Date(year, month, i));
     let todosNumber = daysTodos.length;
-    console.log("todos number", todosNumber);
-    day.innerHTML =
-      "<div class='todo-count'>" +
-      todosNumber +
-      "</div>" +
-      "<div>" +
-      i +
-      "</div>";
+    
+    // console.log("todos number", todosNumber);
+    const todoCounter = document.createElement("div");
+    todoCounter.classList.add("todo-count");
+    
+    const calendarDay = document.createElement("div");
+    calendarDay.classList.add("card-date");
+    
+    todoCounter.textContent = todosNumber;
+    calendarDay.textContent = i;
+    if(todosNumber > 0){
+      day.append(todoCounter, calendarDay); 
+    } 
+    else {
+      day.append(calendarDay); 
+    }
+    // day.innerHTML =
+    //   "<div class='todo-count'>" +
+    //   todosNumber +
+    //   "<div class='card-date'>" +
+    //   i +
+    //   "</div>" + 
+    //   "</div>";
+    // }
+    // else{
+    //   console.log("todos number", todosNumber);
+    //   day.innerHTML =
+        
+    //     "<div>" +
+    //     i +
+    //     "</div>";
+      
+    // }
     grid.appendChild(day);
   }
 }
