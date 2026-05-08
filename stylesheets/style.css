@@ -37,6 +37,16 @@ body {
     background-color: #eee;
     text-align: center;
     border-radius: .3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    position: relative
+}
+
+.card-date {
+    flex-grow: 1;
+    text-align: center;
+    align-content:  center;
 }
 
 .weekday {
@@ -195,9 +205,15 @@ article {
 
 .todo-count {
     text-align: left !important;
+    position: absolute;
+    top: 4px; 
+    left: 4px;
 }
 
 .hidden {
+    position: absolute;
+    top: 4 px; 
+    left:4px; 
     display: none;
 }
 
